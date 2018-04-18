@@ -23,6 +23,7 @@ OBJ = $(SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME):
+		$(shell cp srcs/$(SRC) /)
 		gcc $(FLAG) $(OPTION) $(SRC)
 		ar rc $(NAME) $(OBJ)
 
