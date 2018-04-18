@@ -16,8 +16,9 @@ HEADER = ./includes/
 ROOT = ./
 FLAG = -Wall -Wextra -Werror
 OPTION = -c -I $(HEADER)
-SRC = $(wildcard $(PATH_SRC)/*.c)
-OBJ = $(wildcard *.o)
+SRC = ft_memset.c \
+		ft_bzero.c
+OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
