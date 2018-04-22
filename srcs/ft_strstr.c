@@ -13,13 +13,13 @@ char	*ft_strstr(const char *s1, const char *s2)
 	while (s1[i])
 	{	
 		j = 0;
-		while (haystack[i] == needle[i + j])
+		while (s1[i] == s2[i + j])
 		{
-			if (j == len - 1)
+			if (j == s2len - 1)
 				return ((char *)s1 + i);
 			j++;
 		}
 		i++;
 	}
-	return (NULL)
+	return (NULL);
 }
