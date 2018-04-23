@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/23 19:21:49 by tclavet           #+#    #+#             */
+/*   Updated: 2018/04/23 20:06:25 by tclavet          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -10,4 +22,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	ft_memcpy(dst, tmp, len);
 	free(tmp);
 	return (dst);
-}	
+}

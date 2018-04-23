@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/23 19:23:33 by tclavet           #+#    #+#             */
+/*   Updated: 2018/04/23 20:05:49 by tclavet          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-/* Count the number of words based on string and delimiter */
 static int	ft_count_words(char const *s, char c)
 {
 	size_t	i;
-	int	words;
+	int		words;
 
 	i = 0;
 	words = 0;
@@ -23,7 +34,7 @@ static int	ft_count_words(char const *s, char c)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	int	words;
+	int		words;
 	char	**tab;
 	size_t	i;
 	size_t	j;
