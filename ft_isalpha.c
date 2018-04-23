@@ -6,7 +6,7 @@
 /*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:20:55 by tclavet           #+#    #+#             */
-/*   Updated: 2018/04/23 19:24:12 by tclavet          ###   ########.fr       */
+/*   Updated: 2018/04/23 20:58:07 by tclavet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_isupper(int c)
 		return (0);
 }
 
-int			ft_isalpa(int c)
+int			ft_isalpha(int c)
 {
 	if (ft_islower(c) || ft_isupper(c))
 		return (1);
