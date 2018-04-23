@@ -25,10 +25,10 @@ char	*ft_strtrim(char const *s)
 		i++;
 	while (s[j - 1] == ' ' || s[j - 1] == '\n' || s[i - 1] == '\t')
 		j--;
-	if (i == 0 && j == ft_strlen(s))
-		return (ft_strcpy(str, s));
 	if ((str = ft_strnew(j - i + 1)) == NULL)
 		return (NULL);
+	if (i == 0 && j == ft_strlen(s))
+		return (ft_strcpy(str, s));
 	k = 0;
 	while (i < j)
 	{

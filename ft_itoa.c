@@ -38,12 +38,12 @@ char		*ft_itoa(int n)
 {
 	char	*str;
 	int		tmp;
-	size_t	i;
+	int		i;
 
-	if ((tmp = ft_strnew(ft_size_nb(n))) == NULL)
+	if ((str = ft_strnew(ft_size_nb(n))) == NULL)
 		return (NULL);
 	if (n == -2147483648)
-		return (ft_strdub("-2147483648"));
+		return (ft_strdup("-2147483648"));
 	tmp = n;
 	i = ft_size_nb(n) - 1;
 	if (n < 0)
