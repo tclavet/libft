@@ -6,7 +6,7 @@
 /*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:22:18 by tclavet           #+#    #+#             */
-/*   Updated: 2018/04/23 19:24:33 by tclavet          ###   ########.fr       */
+/*   Updated: 2018/05/04 19:48:00 by tclavet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
+	while (*s != (char)c && *s != '\0')
 		s++;
-	}
+	if (*s == (char)c)
+		return ((char *)s);
 	return (NULL);
 }

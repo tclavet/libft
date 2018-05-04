@@ -6,7 +6,7 @@
 /*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:23:33 by tclavet           #+#    #+#             */
-/*   Updated: 2018/04/23 20:05:49 by tclavet          ###   ########.fr       */
+/*   Updated: 2018/05/04 19:27:33 by tclavet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,16 @@ static int	ft_count_words(char const *s, char c)
 	return (words);
 }
 
+static int	ft_countadd(char const *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] == c)
+		i++;
+	return (i);
+}
+
 char		**ft_strsplit(char const *s, char c)
 {
 	int		words;
@@ -44,10 +54,8 @@ char		**ft_strsplit(char const *s, char c)
 	words = ft_count_words(s, c);
 	if ((tab = (char **)malloc(sizeof(char *) * (words + 1))) == NULL)
 		return (NULL);
-	i = 0;
+	i = ft_countadd(s, c);
 	k = 0;
-	while (s[i] == c)
-		i++;
 	while (s[i])
 	{
 		j = 0;

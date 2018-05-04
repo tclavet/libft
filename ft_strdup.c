@@ -6,7 +6,7 @@
 /*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:22:28 by tclavet           #+#    #+#             */
-/*   Updated: 2018/04/23 20:22:14 by tclavet          ###   ########.fr       */
+/*   Updated: 2018/05/04 19:36:50 by tclavet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strdup(char *src)
 
 	i = 0;
 	len = ft_strlen(src);
-	cmp = (char *)malloc(sizeof(char) * (len + 1));
+	if ((cmp = (char *)malloc(sizeof(char) * (len + 1))) == NULL)
+		return (NULL);
 	while (src[i])
 	{
 		cmp[i] = src[i];

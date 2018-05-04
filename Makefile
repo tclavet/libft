@@ -6,12 +6,11 @@
 #    By: tclavet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 15:16:23 by tclavet           #+#    #+#              #
-#    Updated: 2018/04/14 15:20:16 by tclavet          ###   ########.fr        #
+#    Updated: 2018/05/04 19:20:23 by tclavet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-PATH_SRC = ./srcs
 HEADER = ./includes/
 ROOT = ./
 FLAG = -Wall -Wextra -Werror
