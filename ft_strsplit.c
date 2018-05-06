@@ -33,13 +33,16 @@ static int	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-static int	ft_countadd(char const *s, char c)
+static int	ft_countadd_to_c(char const *s, char c)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i] == c)
+	while (*s != c && *s)
+	{
 		i++;
+		s++;
+	}
 	return (i);
 }
 
@@ -49,24 +52,26 @@ char		**ft_strsplit(char const *s, char c)
 	char	**tab;
 	size_t	i;
 	size_t	j;
-	size_t	k;
 
+	if (s == NULL)
+		return (NULL);
 	words = ft_count_words(s, c);
+	i = 0;
+	j = 0;
 	if ((tab = (char **)malloc(sizeof(char *) * (words + 1))) == NULL)
 		return (NULL);
-	i = ft_countadd(s, c);
-	k = 0;
-	while (s[i])
+	while (words > 0)
 	{
-		j = 0;
-		if (i == 0 || (s[i] != c && s[i - 1] == c))
-		{
+		while (s[j] == c && s[j])
+			j++;
 			while (s[i + j] != c && s[i + j])
 				j++;
 			tab[k] = ft_strsub(s, i, j);
 			k++;
 		}
 		i++;
+		words--;
 	}
+	tab[k] = NULL;
 	return (tab);
 }

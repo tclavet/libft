@@ -82,3 +82,12 @@ fclean: clean
 		/bin/rm -f $(NAME)
 
 re: fclean all
+
+test:
+		gcc -c main.c
+		gcc main.o -o test libft.a
+
+tclean :
+		/bin/rm -f main.o test
+
+ret: tclean test

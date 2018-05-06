@@ -18,9 +18,13 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*cpy;
 
 	i = 0;
-	cpy = ft_strnew(len - start);
+	if ((cpy = ft_strnew(len - start)) == NULL)
+		return (NULL);
 	while (i != start)
+	{
 		s++;
+		i++;
+	}
 	cpy = ft_strncpy(cpy, s, len);
 	return (cpy);
 }
