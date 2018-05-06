@@ -12,10 +12,21 @@
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	ft_putnbr(int nb)
 {
-	char	*str;
+	long	n;
 
-	str = ft_itoa(n);
-	ft_putstr(str);
+	n = (long)nb;
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
 }

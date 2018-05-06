@@ -12,34 +12,28 @@
 
 #include "libft.h"
 
-static int	ft_positive(char str)
-{
-	int		sign;
-
-	sign = 1;
-	if (str == '-')
-		sign = -1;
-	return (sign);
-}
-
 int			ft_atoi(const char *str)
 {
-	size_t	i;
+	int		n;
 	int		sign;
-	int		value;
+	int		i;
 
 	i = 0;
-	while ((str[i] > 8 && str[i] < 16) && str[i] == 32)
+	n = 0;
+	sign = 1;
+	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
+				|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		sign = ft_positive(str[i]);
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	}
-	while (str[i] >= 48 && str[i] <= 57)
+	while (str[i] >= '0' && str[i] <= '9' && str[i])
 	{
-		value = value * 10 + (str[i] - 48);
+		n = n * 10 + (str[i] - '0');
 		i++;
 	}
-	return (sign * value);
+	return ((int)(n * sign));
 }
