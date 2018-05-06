@@ -66,7 +66,13 @@ SRC = ft_memset.c \
 		ft_strsub.c \
 		ft_strtrim.c \
 		ft_tolower.c \
-		ft_toupper.c 
+		ft_toupper.c \
+		ft_lstadd.c \
+		ft_lstdel.c \
+		ft_lstdelone.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+		ft_lstnew.c
 OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
@@ -82,12 +88,3 @@ fclean: clean
 		/bin/rm -f $(NAME)
 
 re: fclean all
-
-test:
-		gcc -c main.c
-		gcc main.o -o test libft.a
-
-tclean :
-		/bin/rm -f main.o test
-
-ret: tclean test
