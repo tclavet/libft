@@ -66,9 +66,7 @@ SRC = ft_memset.c \
 		ft_strsub.c \
 		ft_strtrim.c \
 		ft_tolower.c \
-		ft_toupper.c \
-		ft_isupper.c \
-		ft_islower.c
+		ft_toupper.c 
 OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
