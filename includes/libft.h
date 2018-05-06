@@ -19,6 +19,13 @@
 # include <sys/stat.h>
 # include <string.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
+
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 int		ft_atoi(const char *str);

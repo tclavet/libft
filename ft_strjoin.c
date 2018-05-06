@@ -16,6 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*out;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	if ((out = ft_strnew(ft_strlen(s1) + ft_strlen(s2))) == NULL)
 		return (NULL);
 	out = ft_strcpy(out, s1);

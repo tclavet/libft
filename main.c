@@ -2,17 +2,7 @@
 
 int		main()
 {
-	char *str = "      split       this for   me  !       ";
-	char **split;
-	
-	int i = 0;
-
-	split = ft_strsplit(str, ' ');
-	while (split[i])
-	{
-		printf("%s\n", split[i]);
-		printf("%d\n", i);
-		i++;
-	}
+	char *s = "99999999999999999999999999";
+	printf("%d\n", ft_atoi(s));
 	return (1);
 }
