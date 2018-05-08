@@ -6,7 +6,7 @@
 /*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:22:08 by tclavet           #+#    #+#             */
-/*   Updated: 2018/04/23 19:24:32 by tclavet          ###   ########.fr       */
+/*   Updated: 2018/05/08 11:47:05 by tclavet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
+	if (s == NULL)
+		return ;
 	while (*s)
 	{
 		ft_putchar(*s);
