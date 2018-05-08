@@ -6,7 +6,7 @@
 /*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:22:32 by tclavet           #+#    #+#             */
-/*   Updated: 2018/04/23 20:01:12 by tclavet          ###   ########.fr       */
+/*   Updated: 2018/05/08 11:15:55 by tclavet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (s == NULL || f  == NULL)
+	if ((s == NULL) || (f == NULL))
 		return ;
 	if (s && *s)
 	{

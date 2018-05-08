@@ -6,7 +6,7 @@
 /*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:23:42 by tclavet           #+#    #+#             */
-/*   Updated: 2018/04/23 20:06:47 by tclavet          ###   ########.fr       */
+/*   Updated: 2018/05/08 11:16:15 by tclavet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char			*ft_strtrim(char const *s)
 	size_t	size;
 	size_t	i;
 	size_t	j;
-	
+
 	if (s == NULL)
 		return (NULL);
 	size = ft_strsize((char *)s);
